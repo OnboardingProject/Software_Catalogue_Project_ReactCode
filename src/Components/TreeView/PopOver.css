@@ -1,0 +1,83 @@
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.modelContainer{
+    max-width: 400px;
+    width: 100%;
+    position: fixed;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+}
+
+.modelRight{
+    width: 100%;
+}
+
+.closeBtn {
+    position: fixed;
+    top:8px;
+    right:8px;
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-top: 2rem;
+    padding: 3rem 3rem;
+}
+
+.content-heading{
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+/* .img {
+    width: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+} */
+
+
+
+
+
+.btnContainer button{
+    /* width:100%;
+    margin: .5rem;
+    padding: 16px 0;
+    border: 1px solid #411b57; */
+
+}
+
+.btnPrimary{
+    /* background-color: #391b85; */
+    background-color: green;
+    color: white;
+    width:50%;
+    /* outline-color: white; */
+    padding: 7px;
+}
+
+.btnOutline{
+    background-color: white;
+    color: black;
+    width:50%;
+    /* outline-color: white; */
+    padding: 7px;
+}
+
+.bold{
+    font-weight: 600;
+}
