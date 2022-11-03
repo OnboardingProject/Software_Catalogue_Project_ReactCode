@@ -27,7 +27,7 @@ export default function AddProduct(props) {
             ],
             "productDescription": productDescription,
         }
-        // props.AddProduct(fieldValues)
+        
         AppService.postProducts(fieldValues).then((data) => {
             setPopupopen(true)
             props.getData()
@@ -75,7 +75,7 @@ export default function AddProduct(props) {
                                     <Grid xs={12} item>
                                         <TextField label='productDescription' placeholder='Enter the productDescription' value={productDescription} fullWidth required onChange={(e) => setproductDescription(e.target.value)} />
                                     </Grid>
-                                    <Grid className='btnContainer'/*  xs={12} item */>
+                                    <Grid className='btnContainer'>
                                         <Button type="button" color='success' disabled={!productName || !contractSpend || !stakeholder || !productDescription} onClick={postData} className='btnPrimary' >
                                             <span className='bold'>OK</span>
                                         </Button>

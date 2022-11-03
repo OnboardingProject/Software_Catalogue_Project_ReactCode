@@ -13,21 +13,24 @@ const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-function ModalCatalog() {
+export default function ModalCatalog(props) {
     const [PopUp, setPopUp] = React.useState(false);
     const popUpClose = () => setPopUp(false);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [levelName, setLevelName] = useState('');
+    
     const postData = () => {
         const payLoad = {
             "levelName": levelName,
             "hierarchyLevel": null
         }
-        AppService.postCatagories(payLoad).then((data) => {
+        AppService.postCategories(payLoad).then((data) => {
+            console.log(props.getCategories)
             setOpen(false)
             setPopUp(true)
+            props.getCategories()
         }).catch((e) => {
             console.log("Error occured", e)
             alert(e.message);
@@ -78,4 +81,3 @@ function ModalCatalog() {
         </div>
     )
 }
-export default ModalCatalog

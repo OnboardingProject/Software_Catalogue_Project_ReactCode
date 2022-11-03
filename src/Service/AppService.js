@@ -8,7 +8,7 @@ class AppService {
             return "error";
         }
     }
-    postCatagories = async (val) => {
+    postCategories = async (val) => {
         return await axios.post('http://localhost:8098/category/category', val);
 
         // try {
